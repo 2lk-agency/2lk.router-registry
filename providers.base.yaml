@@ -1,0 +1,277 @@
+providers:
+  - id: groq
+    name: Groq Cloud
+    type: openai
+    tier: free
+    billing_note: 100% Free (No Card)
+    signup_url: https://console.groq.com/keys
+    base_url: https://api.groq.com/openai/v1
+    env_var: GROQ_API_KEY
+    description: Ultra-fast LPU inference & free Whisper Large v3 audio transcription
+    strip_fields:
+      - service_tier
+    default_max_est_tokens: 6500
+    models:
+      - openai/gpt-oss-120b
+      - openai/gpt-oss-20b
+      - qwen/qwen3.8-27b
+      - llama-3.3-70b-versatile
+      - whisper-large-v3
+      - whisper-large-v3-turbo
+
+  - id: openrouter
+    name: OpenRouter (:free)
+    type: openai
+    tier: free
+    billing_note: 100% Free (No Card)
+    signup_url: https://openrouter.ai/settings/keys
+    base_url: https://openrouter.ai/api/v1
+    env_var: OPENROUTER_API_KEY
+    description: Community free-tier routing across open-weights models (:free)
+    strip_fields:
+      - service_tier
+    max_embed_batch: 64
+    models:
+      - google/gemma-4-31b-it:free
+      - google/gemma-4-26b-a4b-it:free
+      - nvidia/nemotron-3-ultra-550b-a55b:free
+      - openrouter/free
+
+  - id: github
+    name: GitHub Models
+    type: openai
+    tier: free
+    billing_note: 100% Free (GitHub PAT)
+    signup_url: https://github.com/settings/tokens
+    base_url: https://models.inference.ai.azure.com
+    env_var: GITHUB_MODELS_KEY
+    description: Free daily developer quota for hosted OpenAI, DeepSeek, Llama & Phi models
+    strip_fields:
+      - service_tier
+      - logit_bias
+    default_max_est_tokens: 7500
+    models:
+      - gpt-4o
+      - gpt-4o-mini
+      - DeepSeek-R1
+      - Llama-3.3-70B-Instruct
+      - Phi-4
+
+  - id: gemini-free
+    name: Google AI Studio (Free Project)
+    type: openai
+    tier: free
+    billing_note: 100% Free (Unbilled GCP Project)
+    signup_url: https://aistudio.google.com/app/apikey
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai
+    env_var: GEMINI_FREE_API_KEY
+    description: Unbilled Google AI Studio project for Gemini Flash/Pro & Gemma free-tier quotas
+    strip_fields:
+      - logit_bias
+      - frequency_penalty
+      - presence_penalty
+      - stream_options
+      - service_tier
+    models:
+      - gemini-3.8-flash
+      - gemini-3.5-flash-lite
+      - gemini-3.1-pro-preview
+      - gemini-2.5-flash
+      - gemma-4-31b-it
+
+  - id: cohere
+    name: Cohere Trial API
+    type: openai
+    tier: free
+    billing_note: 100% Free Trial (Non-Commercial)
+    signup_url: https://dashboard.cohere.com/api-keys
+    base_url: https://api.cohere.com/compatibility/v1
+    env_var: COHERE_API_KEY
+    description: Free trial tier for Command-A, North-Mini-Code & Embed v3 models
+    strip_fields:
+      - service_tier
+      - logit_bias
+      - stream_options
+    models:
+      - command-a-plus-05-2026
+      - command-a-reasoning-08-2025
+      - north-mini-code-1.0
+      - c4ai-aya-expanse-32b
+      - embed-english-v3.0
+
+  - id: cloudflare
+    name: Cloudflare Workers AI
+    type: openai
+    tier: free
+    billing_note: 100% Free (10k Neurons/day)
+    signup_url: https://dash.cloudflare.com/profile/api-tokens
+    base_url: https://api.cloudflare.com/client/v4/accounts/<CLOUDFLARE_ACCOUNT_ID>/ai/v1
+    env_var: CLOUDFLARE_API_KEY
+    description: Free 10,000 Neurons/day serverless inference & BGE embeddings
+    strip_fields:
+      - service_tier
+      - logit_bias
+      - stream_options
+    max_embed_batch: 8
+    models:
+      - "@cf/qwen/qwen3.8-27b"
+      - "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b"
+      - "@cf/qwen/qwq-32b"
+      - "@cf/qwen/qwen2.5-coder-32b-instruct"
+      - "@cf/nvidia/nemotron-3-120b-a12b"
+      - "@cf/openai/gpt-oss-120b"
+      - "@cf/google/gemma-4-26b-a4b-it"
+      - "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+      - "@cf/baai/bge-large-en-v1.5"
+
+  - id: openai
+    name: OpenAI (BYOK)
+    type: openai
+    tier: paid
+    billing_note: Prepaid / Pay-As-You-Go (BYOK)
+    signup_url: https://platform.openai.com/api-keys
+    base_url: https://api.openai.com/v1
+    env_var: OPENAI_API_KEY
+    description: Direct OpenAI API for GPT-4o, o-series reasoning, and text-embedding-3 models
+    strip_fields: []
+    models:
+      - gpt-4o
+      - gpt-4o-mini
+      - o3-mini
+      - text-embedding-3-small
+      - text-embedding-3-large
+
+  - id: anthropic
+    name: Anthropic Claude (BYOK)
+    type: anthropic
+    tier: paid
+    billing_note: Prepaid / Pay-As-You-Go (BYOK)
+    signup_url: https://console.anthropic.com/settings/keys
+    base_url: https://api.anthropic.com/v1
+    env_var: ANTHROPIC_API_KEY
+    description: Native Anthropic Messages API translation via standard OpenAI SDK
+    strip_fields: []
+    models:
+      - claude-3-7-sonnet-latest
+      - claude-3-5-sonnet-latest
+      - claude-3-5-haiku-latest
+
+  - id: gemini
+    name: Google AI Studio (Paid/Prepaid)
+    type: openai
+    tier: paid
+    billing_note: Prepaid / Billing Linked (BYOK)
+    signup_url: https://aistudio.google.com/app/apikey
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai
+    env_var: GEMINI_API_KEY
+    description: High-rate-limit billed Google AI Studio project for production workloads
+    strip_fields:
+      - logit_bias
+      - frequency_penalty
+      - presence_penalty
+      - stream_options
+      - service_tier
+    models:
+      - gemini-3.8-flash
+      - gemini-3.1-pro-preview
+      - gemini-2.5-pro
+      - gemini-2.5-flash
+
+  - id: deepseek
+    name: DeepSeek API (BYOK)
+    type: openai
+    tier: paid
+    billing_note: Prepaid Credits (BYOK)
+    signup_url: https://platform.deepseek.com/api_keys
+    base_url: https://api.deepseek.com/v1
+    env_var: DEEPSEEK_API_KEY
+    description: Direct DeepSeek V3 / Reasoner (R1) API endpoint
+    strip_fields:
+      - service_tier
+    models:
+      - deepseek-chat
+      - deepseek-reasoner
+
+  - id: xai
+    name: xAI Grok (BYOK)
+    type: openai
+    tier: paid
+    billing_note: Prepaid Credits (BYOK)
+    signup_url: https://console.x.ai/
+    base_url: https://api.x.ai/v1
+    env_var: XAI_API_KEY
+    description: Direct xAI API for Grok reasoning and chat models
+    strip_fields:
+      - service_tier
+    models:
+      - grok-3
+      - grok-3-mini
+
+  - id: mistral
+    name: Mistral AI (BYOK)
+    type: openai
+    tier: paid
+    billing_note: Prepaid / Card Required (BYOK)
+    signup_url: https://console.mistral.ai/api-keys/
+    base_url: https://api.mistral.ai/v1
+    env_var: MISTRAL_API_KEY
+    description: European frontier and coding models (Mistral Large, Codestral, Mistral Small)
+    strip_fields:
+      - logit_bias
+      - service_tier
+    models:
+      - mistral-large-latest
+      - codestral-latest
+      - mistral-small-latest
+
+  - id: huggingface
+    name: Hugging Face Router (BYOK)
+    type: openai
+    tier: paid
+    billing_note: Prepaid Credits / PRO Required
+    signup_url: https://huggingface.co/settings/tokens
+    base_url: https://router.huggingface.co/v1
+    env_var: HF_API_KEY
+    description: Multi-provider open-weights inference via Hugging Face Router
+    strip_fields:
+      - service_tier
+      - logit_bias
+      - stream_options
+    models:
+      - Qwen/Qwen3-235B-A22B
+      - deepseek-ai/DeepSeek-R1
+      - google/gemma-3-27b-it
+
+  - id: sambanova
+    name: SambaNova Cloud (BYOK)
+    type: openai
+    tier: paid
+    billing_note: Prepaid Credits / Card Required
+    signup_url: https://cloud.sambanova.ai/apis
+    base_url: https://api.sambanova.ai/v1
+    env_var: SAMBANOVA_API_KEY
+    description: High-speed RDU inference for Llama 3.3, Qwen & DeepSeek models
+    strip_fields:
+      - service_tier
+      - stream_options
+      - logit_bias
+    models:
+      - Meta-Llama-3.3-70B-Instruct
+      - DeepSeek-R1
+
+  - id: cerebras
+    name: Cerebras Cloud (BYOK)
+    type: openai
+    tier: paid
+    billing_note: Card / Credits Required
+    signup_url: https://cloud.cerebras.ai/
+    base_url: https://api.cerebras.ai/v1
+    env_var: CEREBRAS_API_KEY
+    description: Wafer-scale inference for Llama and Qwen models
+    strip_fields:
+      - logit_bias
+      - parallel_tool_calls
+      - service_tier
+    models:
+      - llama-3.3-70b
+      - llama3.1-8b
