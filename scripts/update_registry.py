@@ -174,7 +174,7 @@ def fetch_optional_provider_models(provider_id: str) -> list[str] | None:
             return extract_model_ids(data)
 
         if provider_id == "github":
-            key = (os.getenv("GITHUB_MODELS_KEY") or "").strip()
+            key = (os.getenv("GH_MODELS_KEY") or os.getenv("GITHUB_MODELS_KEY") or "").strip()
             if not key:
                 return None
             data = http_get_json(

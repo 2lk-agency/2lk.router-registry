@@ -22,5 +22,5 @@ By default, `scripts/update_registry.py` fetches live model pricing and `:free` 
 - `GROQ_API_KEY`
 - `GEMINI_FREE_API_KEY`
 - `COHERE_API_KEY`
-- `GITHUB_MODELS_KEY`
+- `GH_MODELS_KEY`
 - `CLOUDFLARE_API_KEY` + `CLOUDFLARE_ACCOUNT_ID` *(only used to query `/models/search`; the account ID is never written into `registry.yaml`)*
