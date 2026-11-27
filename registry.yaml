@@ -2,7 +2,7 @@
 # Trigger manually via `2lk-router -sync-registry` or Web Dashboard -> Sync Registry.
 schema_version: 1
 source: https://github.com/2lk-agency/2lk.router-registry
-updated_at: '2026-11-27T02:15:48Z'
+updated_at: '2026-11-27T11:35:05Z'
 pricing:
   default:
     prompt_per_1m: 0.5
@@ -204,20 +204,20 @@ pricing:
       prompt_per_1m: 0.048
       completion_per_1m: 0.144
     deepseek/deepseek-v4-flash-vision-exp:
-      prompt_per_1m: 0.44
-      completion_per_1m: 1.32
+      prompt_per_1m: 0.2156
+      completion_per_1m: 0.6468
     deepseek/deepseek-v4-pro:
       prompt_per_1m: 0.888188
       completion_per_1m: 1.5082
     deepseek/deepseek-v4-pro-0813:
-      prompt_per_1m: 0.25
+      prompt_per_1m: 0.0999
       completion_per_1m: 5.0
     deepseek/deepseek-v4.1-flash:
       prompt_per_1m: 0.14
       completion_per_1m: 0.42
     deepseek/deepseek-v4.1-flash-1017:
-      prompt_per_1m: 0.3
-      completion_per_1m: 1.2
+      prompt_per_1m: 0.15
+      completion_per_1m: 0.6
     deepseek/deepseek-v4.1-flash-1017:batch:
       prompt_per_1m: 0.035
       completion_per_1m: 0.149
@@ -355,13 +355,13 @@ pricing:
       completion_per_1m: 0.15
     google/gemma-3-27b-it:
       prompt_per_1m: 0.08
-      completion_per_1m: 0.45
+      completion_per_1m: 0.16
     google/gemma-3-4b-it:
       prompt_per_1m: 0.05
       completion_per_1m: 0.1
     google/gemma-4-26b-a4b-it:
-      prompt_per_1m: 0.0765
-      completion_per_1m: 0.255
+      prompt_per_1m: 0.09
+      completion_per_1m: 0.3
     google/gemma-4-31b-it:
       prompt_per_1m: 0.2
       completion_per_1m: 0.4
@@ -1185,8 +1185,8 @@ pricing:
       prompt_per_1m: 1.0
       completion_per_1m: 4.05
     thinkingmachines/inkling-2-mini:
-      prompt_per_1m: 0.075
-      completion_per_1m: 0.3
+      prompt_per_1m: 0.06
+      completion_per_1m: 0.24
     thinkingmachines/inkling-2-small:
       prompt_per_1m: 0.3
       completion_per_1m: 1.0
@@ -1332,8 +1332,8 @@ pricing:
       prompt_per_1m: 0.036
       completion_per_1m: 0.5
     ~deepseek/deepseek-pro-latest:
-      prompt_per_1m: 0.111
-      completion_per_1m: 4.44
+      prompt_per_1m: 0.0999
+      completion_per_1m: 5.0
     ~deepseek/deepseek-v4-flash-latest:
       prompt_per_1m: 0.047
       completion_per_1m: 0.3
