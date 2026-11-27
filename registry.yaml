@@ -2,7 +2,7 @@
 # Trigger manually via `2lk-router -sync-registry` or Web Dashboard -> Sync Registry.
 schema_version: 1
 source: https://github.com/2lk-agency/2lk.router-registry
-updated_at: '2026-11-27T02:12:21Z'
+updated_at: '2026-11-27T02:15:48Z'
 pricing:
   default:
     prompt_per_1m: 0.5
@@ -1384,10 +1384,10 @@ providers:
   - service_tier
   default_max_est_tokens: 6500
   models:
+  - allam-2-7b
   - openai/gpt-oss-120b
   - openai/gpt-oss-20b
   - qwen/qwen3.8-27b
-  - llama-3.3-70b-versatile
   - whisper-large-v3
   - whisper-large-v3-turbo
 - id: openrouter
@@ -1450,10 +1450,45 @@ providers:
   - stream_options
   - service_tier
   models:
-  - gemini-3.8-flash
-  - gemini-3.5-flash-lite
-  - gemini-3.1-pro-preview
+  - gemini-2.5-computer-use-preview-10-2025
   - gemini-2.5-flash
+  - gemini-2.5-flash-image
+  - gemini-2.5-flash-lite
+  - gemini-2.5-pro
+  - gemini-3-flash-preview
+  - gemini-3-pro-image
+  - gemini-3-pro-image-preview
+  - gemini-3.1-flash-image
+  - gemini-3.1-flash-image-preview
+  - gemini-3.1-flash-lite
+  - gemini-3.1-flash-lite-image
+  - gemini-3.1-flash-lite-preview
+  - gemini-3.1-pro-preview
+  - gemini-3.1-pro-preview-customtools
+  - gemini-3.5-flash
+  - gemini-3.5-flash-lite
+  - gemini-3.5-transcribe
+  - gemini-3.5-transcribe-live
+  - gemini-3.6-flash
+  - gemini-3.7-flash
+  - gemini-3.8-flash
+  - gemini-3.8-live
+  - gemini-4-argon
+  - gemini-4-carbon
+  - gemini-4-hydrogen
+  - gemini-4-neon
+  - gemini-decision-1
+  - gemini-embedding-001
+  - gemini-embedding-2
+  - gemini-embedding-2-preview
+  - gemini-flash-latest
+  - gemini-flash-lite-latest
+  - gemini-nano-banana-2.1
+  - gemini-omni-1.1-flash
+  - gemini-omni-1.2-flash
+  - gemini-omni-flash-preview
+  - gemini-pro-latest
+  - gemma-4-26b-a4b-it
   - gemma-4-31b-it
 - id: cohere
   name: Cohere Trial API
@@ -1469,11 +1504,43 @@ providers:
   - logit_bias
   - stream_options
   models:
+  - c4ai-aya-expanse-32b
+  - c4ai-aya-vision-32b
+  - cohere-transcribe-03-2026
+  - command-a-03-2025
   - command-a-plus-05-2026
   - command-a-reasoning-08-2025
-  - north-mini-code-1.0
-  - c4ai-aya-expanse-32b
+  - command-a-translate-08-2025
+  - command-a-vision-07-2025
+  - command-r-08-2024
+  - command-r-plus-08-2024
+  - command-r7b-12-2024
+  - command-r7b-arabic-02-2025
+  - embed-english-light-v3.0
+  - embed-english-light-v3.0-image
   - embed-english-v3.0
+  - embed-english-v3.0-image
+  - embed-multilingual-light-v3.0
+  - embed-multilingual-light-v3.0-image
+  - embed-multilingual-v3.0
+  - embed-multilingual-v3.0-image
+  - embed-v4.0
+  - embed-v5.0-fast
+  - embed-v5.0-pro
+  - north-mini-code-1.0
+  - north-small-translate-1.0
+  - parse-v5.0
+  - rerank-english-v3.0
+  - rerank-multilingual-v3.0
+  - rerank-v3.5
+  - rerank-v4.0-fast
+  - rerank-v4.0-pro
+  - rerank-v5.0-fast
+  - rerank-v5.0-pro
+  - tiny-aya-earth
+  - tiny-aya-fire
+  - tiny-aya-global
+  - tiny-aya-water
 - id: cloudflare
   name: Cloudflare Workers AI
   type: openai
@@ -1489,15 +1556,37 @@ providers:
   - stream_options
   max_embed_batch: 8
   models:
-  - '@cf/qwen/qwen3.8-27b'
-  - '@cf/deepseek-ai/deepseek-r1-distill-qwen-32b'
-  - '@cf/qwen/qwq-32b'
-  - '@cf/qwen/qwen2.5-coder-32b-instruct'
-  - '@cf/nvidia/nemotron-3-120b-a12b'
-  - '@cf/openai/gpt-oss-120b'
-  - '@cf/google/gemma-4-26b-a4b-it'
-  - '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
-  - '@cf/baai/bge-large-en-v1.5'
+  - 01bc2fb0-4bca-4598-b985-d2584a3f46c0
+  - 059de3ad-d350-4cb6-8b31-e4f34847d10a
+  - 06455e78-19f7-487b-93cd-c05a3dd07813
+  - 188a4e1e-253e-46d0-9616-0bf8c149763f
+  - 215ee9cf-aaa0-48bd-a084-00da8da2fbeb
+  - 22338608-b54d-4f04-884e-ab06f3dbbf3e
+  - 2b2b6dfb-2cd0-433f-802c-533d40508d9b
+  - 2cbc033b-ded8-4e02-bbb2-47cf05d5cfe5
+  - 31690291-ebdc-4f98-bcfc-a44844e215b7
+  - 328adb49-4a7d-43e3-a2d5-802ae8100fe7
+  - 41ca173f-72d5-4420-8915-49e835d2676e
+  - 429b9e8b-d99e-44de-91ad-706cf8183658
+  - 51b71d5b-8bc0-4489-a107-95e542b69914
+  - 543fea3d-dcff-4c3b-af79-b83f601aa1cb
+  - 56482a5b-020e-488d-9c56-11a3ed40719c
+  - 57fbd08a-a4c4-411c-910d-b9459ff36c20
+  - 6b0b79c1-25e6-4498-bb62-5161df39f0ef
+  - 7952d0cc-cb00-4e10-be02-667565c2ee0f
+  - 7a143886-c9bb-4a1c-be95-377b1973bc3b
+  - 86b3e51a-4b05-43fa-a403-0f27821919d2
+  - 87f39d62-116c-4b26-b2cd-562a9ba01f2f
+  - bc2b61f6-7eb3-4cdf-94f5-ffc128bd6aa4
+  - bf419b23-844f-4a2c-8111-89dbd63152eb
+  - c05fea67-c5a9-49ca-a7ab-446a0d62cb7a
+  - c58c317b-0c15-4bda-abb6-93e275f282d9
+  - cb254e3b-372b-4d4e-8526-ada79940427a
+  - cc80437b-9a8d-4f1a-9c77-9aaf0d226922
+  - d27e5c9c-9bbb-41b7-9ef9-6beceeeb07ef
+  - eed32bc1-8775-4985-89ce-dd1405508ad8
+  - f9f2250b-1048-4a52-9910-d0bf976616a1
+  - fd81c856-07a9-4965-9241-a124f369826c
 - id: openai
   name: OpenAI (BYOK)
   type: openai
@@ -1544,10 +1633,46 @@ providers:
   - stream_options
   - service_tier
   models:
-  - gemini-3.8-flash
-  - gemini-3.1-pro-preview
-  - gemini-2.5-pro
+  - gemini-2.5-computer-use-preview-10-2025
   - gemini-2.5-flash
+  - gemini-2.5-flash-image
+  - gemini-2.5-flash-lite
+  - gemini-2.5-pro
+  - gemini-3-flash-preview
+  - gemini-3-pro-image
+  - gemini-3-pro-image-preview
+  - gemini-3.1-flash-image
+  - gemini-3.1-flash-image-preview
+  - gemini-3.1-flash-lite
+  - gemini-3.1-flash-lite-image
+  - gemini-3.1-flash-lite-preview
+  - gemini-3.1-pro-preview
+  - gemini-3.1-pro-preview-customtools
+  - gemini-3.5-flash
+  - gemini-3.5-flash-lite
+  - gemini-3.5-transcribe
+  - gemini-3.5-transcribe-live
+  - gemini-3.6-flash
+  - gemini-3.7-flash
+  - gemini-3.8-flash
+  - gemini-3.8-live
+  - gemini-4-argon
+  - gemini-4-carbon
+  - gemini-4-hydrogen
+  - gemini-4-neon
+  - gemini-decision-1
+  - gemini-embedding-001
+  - gemini-embedding-2
+  - gemini-embedding-2-preview
+  - gemini-flash-latest
+  - gemini-flash-lite-latest
+  - gemini-nano-banana-2.1
+  - gemini-omni-1.1-flash
+  - gemini-omni-1.2-flash
+  - gemini-omni-flash-preview
+  - gemini-pro-latest
+  - gemma-4-26b-a4b-it
+  - gemma-4-31b-it
 - id: deepseek
   name: DeepSeek API (BYOK)
   type: openai
