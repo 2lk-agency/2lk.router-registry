@@ -2,7 +2,7 @@
 # Trigger manually via `2lk-router -sync-registry` or Web Dashboard -> Sync Registry.
 schema_version: 1
 source: https://github.com/2lk-agency/2lk.router-registry
-updated_at: '2026-11-27T11:35:05Z'
+updated_at: '2026-11-28T11:06:00Z'
 pricing:
   default:
     prompt_per_1m: 0.5
@@ -198,8 +198,8 @@ pricing:
       prompt_per_1m: 0.09
       completion_per_1m: 0.18
     deepseek/deepseek-v4-flash-0731:
-      prompt_per_1m: 0.047
-      completion_per_1m: 0.3
+      prompt_per_1m: 0.0456
+      completion_per_1m: 0.27
     deepseek/deepseek-v4-flash-0731:batch:
       prompt_per_1m: 0.048
       completion_per_1m: 0.144
@@ -207,14 +207,14 @@ pricing:
       prompt_per_1m: 0.2156
       completion_per_1m: 0.6468
     deepseek/deepseek-v4-pro:
-      prompt_per_1m: 0.888188
-      completion_per_1m: 1.5082
+      prompt_per_1m: 0.89
+      completion_per_1m: 1.5069
     deepseek/deepseek-v4-pro-0813:
       prompt_per_1m: 0.0999
       completion_per_1m: 5.0
     deepseek/deepseek-v4.1-flash:
-      prompt_per_1m: 0.14
-      completion_per_1m: 0.42
+      prompt_per_1m: 0.051
+      completion_per_1m: 0.567
     deepseek/deepseek-v4.1-flash-1017:
       prompt_per_1m: 0.15
       completion_per_1m: 0.6
@@ -357,11 +357,11 @@ pricing:
       prompt_per_1m: 0.08
       completion_per_1m: 0.16
     google/gemma-3-4b-it:
-      prompt_per_1m: 0.05
-      completion_per_1m: 0.1
+      prompt_per_1m: 0.04
+      completion_per_1m: 0.05
     google/gemma-4-26b-a4b-it:
-      prompt_per_1m: 0.09
-      completion_per_1m: 0.3
+      prompt_per_1m: 0.0675
+      completion_per_1m: 0.225
     google/gemma-4-31b-it:
       prompt_per_1m: 0.2
       completion_per_1m: 0.4
@@ -383,6 +383,9 @@ pricing:
     inclusionai/ling-3.1-flash:
       prompt_per_1m: 0.075
       completion_per_1m: 0.225
+    inclusionai/ling-3.2-flash:
+      prompt_per_1m: 0.3
+      completion_per_1m: 0.9
     inclusionai/lingsante-3.1-air-vl:
       prompt_per_1m: 0.06
       completion_per_1m: 0.18
@@ -618,11 +621,11 @@ pricing:
       prompt_per_1m: 0.2
       completion_per_1m: 0.2
     nvidia/nemotron-3.5-lightning:
-      prompt_per_1m: 0.07
+      prompt_per_1m: 0.05
       completion_per_1m: 0.2
     nvidia/nemotron-3.5-super-vl:
       prompt_per_1m: 0.15
-      completion_per_1m: 0.47
+      completion_per_1m: 0.45
     openai/gpt-3.5-turbo-0613:
       prompt_per_1m: 1.0
       completion_per_1m: 2.0
@@ -989,9 +992,6 @@ pricing:
     qwen/qwen3-235b-a22b-2507:
       prompt_per_1m: 0.14
       completion_per_1m: 0.8
-    qwen/qwen3-235b-a22b-thinking-2507:
-      prompt_per_1m: 0.45
-      completion_per_1m: 3.5
     qwen/qwen3-30b-a3b:
       prompt_per_1m: 0.12
       completion_per_1m: 0.5
@@ -1038,8 +1038,8 @@ pricing:
       prompt_per_1m: 0.5
       completion_per_1m: 3.6
     qwen/qwen3.5-9b:
-      prompt_per_1m: 0.1
-      completion_per_1m: 0.25
+      prompt_per_1m: 0.066
+      completion_per_1m: 0.097
     qwen/qwen3.5-flash-02-23:
       prompt_per_1m: 0.065
       completion_per_1m: 0.26
@@ -1188,8 +1188,8 @@ pricing:
       prompt_per_1m: 0.06
       completion_per_1m: 0.24
     thinkingmachines/inkling-2-small:
-      prompt_per_1m: 0.3
-      completion_per_1m: 1.0
+      prompt_per_1m: 0.15
+      completion_per_1m: 0.5
     thinkingmachines/inkling-small:
       prompt_per_1m: 0.45
       completion_per_1m: 1.2
@@ -1335,8 +1335,8 @@ pricing:
       prompt_per_1m: 0.0999
       completion_per_1m: 5.0
     ~deepseek/deepseek-v4-flash-latest:
-      prompt_per_1m: 0.047
-      completion_per_1m: 0.3
+      prompt_per_1m: 0.04532
+      completion_per_1m: 0.13596
     ~google/gemini-flash-latest:
       prompt_per_1m: 1.5
       completion_per_1m: 7.5
@@ -1344,8 +1344,8 @@ pricing:
       prompt_per_1m: 2.0
       completion_per_1m: 10.0
     ~moonshotai/kimi-latest:
-      prompt_per_1m: 0.1824
-      completion_per_1m: 11.0055
+      prompt_per_1m: 0.1453
+      completion_per_1m: 12.2894
     ~openai/gpt-astra-latest:
       prompt_per_1m: 8.0
       completion_per_1m: 40.0
@@ -1406,7 +1406,6 @@ providers:
   - baidu/ernie-5.5-flash-preview:free
   - google/gemma-4-26b-a4b-it:free
   - google/gemma-4-31b-it:free
-  - inclusionai/ling-3.2-flash:free
   - liquid/lfm-3-1.7b:free
   - nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   - nvidia/nemotron-3-ultra-550b-a55b:free
